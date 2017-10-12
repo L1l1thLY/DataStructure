@@ -22,7 +22,8 @@ int insertionSort(int* arrayToSort, int length) {
         if (arrayToSort[i] < arrayToSort[i-1]) {
             temp = arrayToSort[i];
             int j = i - 1;
-            for (; temp < arrayToSort[j]; --j) {
+            for (; (j >= 0) && temp < arrayToSort[j]; --j) {
+
                 arrayToSort[j+1] = arrayToSort[j];
             }
             arrayToSort[j+1] = temp;
@@ -54,7 +55,7 @@ int main (void) {
 
     int array[10] = {13,78,12,22,34,1,23,5,7,99};
 
-    binaryInsertionSort(array, 10);
+    insertionSort(array, 10);
 
     for (int i = 0; i < 10; i++) 
         std::cout << array[i] << std::endl; 
