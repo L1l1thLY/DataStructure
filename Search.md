@@ -22,7 +22,8 @@
 
 ```
 int searchSeq (int* array, int key, int length) {
-    for (int i = length -1; (array[i] != key) && i >= 0; --i);
+int i;
+    for (i = length -1; (array[i] != key) && i >= 0; --i);
     return i;
 }
 ```
